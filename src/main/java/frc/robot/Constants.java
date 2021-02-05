@@ -131,4 +131,10 @@ public final class Constants {
     //Constants for various AUTO variables
     public static double autoDriveSpeed = -0.75;
     public static double autoDriveDistance = 40;
+
+    //Base Constants
+    public static int talonOneCANID = 1;
+    public static int talonTwoCANID = 0;
+    public static int talonThreeCANID = 2;
+    public static int talonFourCANID = 3;
 }

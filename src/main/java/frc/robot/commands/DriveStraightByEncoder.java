@@ -27,7 +27,7 @@ public class DriveStraightByEncoder extends CommandBase {
   public void initialize() {
 
     //reset the encoders and drive forward at specified speed
-    m_base.resetEncoders();
+    // m_base.resetEncoders();
 
   }
 
@@ -35,7 +35,7 @@ public class DriveStraightByEncoder extends CommandBase {
   @Override
   public void execute() {
     m_base.tankDriveByJoystick(speed, speed);
-    SmartDashboard.putNumber("Average Base Encoder Value", m_base.getAverageEncoderDistance());
+    // SmartDashboard.putNumber("Average Base Encoder Value", m_base.getAverageEncoderDistance());
   }
 
   // Called once the command ends or is interrupted.
@@ -48,6 +48,7 @@ public class DriveStraightByEncoder extends CommandBase {
   // Returns true when the command should end.
   @Override
   public boolean isFinished() {
-    return Math.abs(m_base.getAverageEncoderDistance()) >= distance;
+    return true;
+    // return Math.abs(m_base.getAverageEncoderDistance()) >= distance;
   }
 }

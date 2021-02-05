@@ -49,7 +49,6 @@ public class RobotContainer {
   public static int conveyorBeltCANID     = 62; // Brushless
   public static int shooterRotateCANID    = 60; // Brushed
   public static int shooterFlywheelCANID  = 31; // Brushless
-  public static int panelSpinnerCANID     = 30; // Brushed
   
   // Solenoid Ports
   public static int collectorSolPort = 1;
@@ -80,7 +79,6 @@ public class RobotContainer {
     new JoystickButton(gunnerJS, 6).whenHeld(new TurretRotate(m_shooter, Constants.turretRight));
     new JoystickButton(gunnerJS, 7).whenHeld(new ShootandAimMid(m_shooter, m_conveyor));
     new JoystickButton(gunnerJS, 8).whenHeld(new ShootandAimFar(m_shooter, m_conveyor));
-    new JoystickButton(gunnerJS, 9).toggleWhenPressed(new ClimbersUnlock(m_climber));
   }
 
   private void configureBaseController() {
